@@ -1,11 +1,36 @@
 import 'package:flutter/material.dart';
+import 'package:splashscreen/splashscreen.dart';
 
 void main() {
   runApp(MainApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class MainApp extends StatefulWidget {
+  @override
+  _MainAppState createState() => new _MainAppState();
+}
+
+class _MainAppState extends State<MainApp> {
+  @override
+  Widget build(BuildContext context) {
+    return new SplashScreen(
+      seconds: 2,
+      navigateAfterSeconds: new MainAppAfter(),
+      backgroundColor: Colors.black,
+      title: new Text(
+        'MYMONEY',
+        style: TextStyle(
+            fontFamily: 'Poppins',
+            fontWeight: FontWeight.w700,
+            color: Colors.white,
+            fontSize: 40),
+      ),
+    );
+  }
+}
+
+class MainAppAfter extends StatelessWidget {
+  const MainAppAfter();
 
   @override
   Widget build(BuildContext context) {
@@ -41,9 +66,19 @@ class MainApp extends StatelessWidget {
                     fontSize: 12),
               ),
             ),
-            Container(
-              child: MyButton(),
-            )
+            // Container(
+            //   margin: EdgeInsets.only(right: 250, top: 75),
+            //   child: Text(
+            //     'Login',
+            //     style: TextStyle(
+            //         fontFamily: 'Poppins',
+            //         color: Colors.white,
+            //         ),
+            //   ),
+            // )
+            // Container(
+            //   child: MyButton(),
+            // )
           ],
         ),
       ),
@@ -53,19 +88,24 @@ class MainApp extends StatelessWidget {
 
 class MyButton extends StatelessWidget {
   const MyButton();
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Container(
-        child: Text(
-          'Regist Now',
-          style: TextStyle(
-              backgroundColor: Color(0x5C85E6),
-              fontFamily: 'Poppins',
-              fontWeight: FontWeight.w500,
-              fontSize: 12),
-        ),
-      ),
+      home: Scaffold(
+          body: Column(
+        children: [
+          Container(
+            child: Text(
+              'Login',
+              style: TextStyle(
+                  fontFamily: 'Poppins',
+                  color: Colors.white,
+                  backgroundColor: Color(0x1F1F1F)),
+            ),
+          ),
+        ],
+      )),
     );
   }
 }
