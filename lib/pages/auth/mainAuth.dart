@@ -41,9 +41,6 @@ class MainApp extends StatelessWidget {
                     fontSize: 12),
               ),
             ),
-            Container(
-              child: MyButton(),
-            )
           ],
         ),
       ),
