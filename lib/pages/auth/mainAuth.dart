@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:splashscreen/splashscreen.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class _MainAppState extends State<MainApp> {
   @override
   Widget build(BuildContext context) {
     return new SplashScreen(
-      seconds: 2,
+      seconds: 5,
       navigateAfterSeconds: new MainAppAfter(),
       backgroundColor: Colors.black,
       title: new Text(
@@ -66,46 +67,27 @@ class MainAppAfter extends StatelessWidget {
                     fontSize: 12),
               ),
             ),
-            // Container(
-            //   margin: EdgeInsets.only(right: 250, top: 75),
-            //   child: Text(
-            //     'Login',
-            //     style: TextStyle(
-            //         fontFamily: 'Poppins',
-            //         color: Colors.white,
-            //         ),
-            //   ),
-            // )
-            // Container(
-            //   child: MyButton(),
-            // )
+            Container(
+              margin: EdgeInsets.only(left: 20),
+              child: Row(
+                children: <Widget>[
+                  TextButton(
+                      style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              Color(0xff1f1f1f))),
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/dashboard');
+                      },
+                      child: Text(
+                        'Login',
+                        style: TextStyle(color: Colors.white),
+                      ))
+                ],
+              ),
+            ),
           ],
         ),
       ),
-    );
-  }
-}
-
-class MyButton extends StatelessWidget {
-  const MyButton();
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-          body: Column(
-        children: [
-          Container(
-            child: Text(
-              'Login',
-              style: TextStyle(
-                  fontFamily: 'Poppins',
-                  color: Colors.white,
-                  backgroundColor: Color(0x1F1F1F)),
-            ),
-          ),
-        ],
-      )),
     );
   }
 }
