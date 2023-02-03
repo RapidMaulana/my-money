@@ -1,37 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:splashscreen/splashscreen.dart';
 
 void main() {
   runApp(MainApp());
 }
 
-class MainApp extends StatefulWidget {
-  @override
-  _MainAppState createState() => new _MainAppState();
-}
-
-class _MainAppState extends State<MainApp> {
-  @override
-  Widget build(BuildContext context) {
-    return new SplashScreen(
-      seconds: 5,
-      navigateAfterSeconds: new MainAppAfter(),
-      backgroundColor: Colors.black,
-      title: new Text(
-        'MYMONEY',
-        style: TextStyle(
-            fontFamily: 'Poppins',
-            fontWeight: FontWeight.w700,
-            color: Colors.white,
-            fontSize: 40),
-      ),
-    );
-  }
-}
-
-class MainAppAfter extends StatelessWidget {
-  const MainAppAfter();
+class MainApp extends StatelessWidget {
+  const MainApp();
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +20,7 @@ class MainAppAfter extends StatelessWidget {
               child: Image.asset('public/images/Artwork.png'),
             ),
             Container(
-                margin: EdgeInsets.only(top: 50, bottom: 5, right: 45),
+                margin: EdgeInsets.only(top: 10, bottom: 5, right: 45),
                 width: 300,
                 child: Text(
                   "All your finances in one app",
@@ -68,20 +43,47 @@ class MainAppAfter extends StatelessWidget {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(left: 20),
+              margin: EdgeInsets.only(left: 30, top: 30),
               child: Row(
                 children: <Widget>[
                   TextButton(
                       style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all<Color>(
-                              Color(0xff1f1f1f))),
+                        backgroundColor:
+                            MaterialStateProperty.all<Color>(Color(0xff1f1f1f)),
+                        padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
+                            EdgeInsets.symmetric(vertical: 15, horizontal: 38)),
+                      ),
                       onPressed: () {
                         Navigator.pushNamed(context, '/dashboard');
                       },
                       child: Text(
                         'Login',
-                        style: TextStyle(color: Colors.white),
-                      ))
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500),
+                      )),
+                  Container(
+                    margin: EdgeInsets.only(left: 24),
+                    child: TextButton(
+                      style: ButtonStyle(
+                        backgroundColor:
+                          MaterialStateProperty.all<Color>(Color(0xff5C85E6)),
+                        padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
+                          EdgeInsets.symmetric(vertical: 15, horizontal: 55)),
+                        
+                      ),
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/dashboard');
+                      },
+                      child: Text(
+                        'Regist Now',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500),
+                    ))
+                  )
                 ],
               ),
             ),
