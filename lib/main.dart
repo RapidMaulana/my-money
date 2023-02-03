@@ -1,6 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 import 'package:mymoney/pages/auth/mainAuth.dart';
+import 'package:mymoney/pages/views/dashboard.dart';
+import 'package:mymoney/pages/splashscreen.dart';
+import 'package:mymoney/pages/views/history.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,7 +16,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MainApp(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => SplashApp(),
+        '/dashboard':(context) => const DashboardApp(),
+        '/login':(context) => const MainApp(),
+        '/history':(context) => const HistoryApp()
+      },
     );
   }
 }
