@@ -54,7 +54,7 @@ class MainApp extends StatelessWidget {
                             EdgeInsets.symmetric(vertical: 15, horizontal: 38)),
                       ),
                       onPressed: () {
-                        Navigator.pushNamed(context, '/dashboard');
+                        Navigator.pushNamed(context, '/login');
                       },
                       child: Text(
                         'Login',
