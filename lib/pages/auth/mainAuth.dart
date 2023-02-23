@@ -14,6 +14,7 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.black,
+        resizeToAvoidBottomInset: false,
         body: Column(
           children: [
             Container(
@@ -54,7 +55,7 @@ class MainApp extends StatelessWidget {
                             EdgeInsets.symmetric(vertical: 15, horizontal: 38)),
                       ),
                       onPressed: () {
-                        Navigator.pushNamed(context, '/login');
+                        Navigator.pushNamed(context, '/loginn');
                       },
                       child: Text(
                         'Login',
@@ -64,26 +65,26 @@ class MainApp extends StatelessWidget {
                             fontWeight: FontWeight.w500),
                       )),
                   Container(
-                    margin: EdgeInsets.only(left: 24),
-                    child: TextButton(
-                      style: ButtonStyle(
-                        backgroundColor:
-                          MaterialStateProperty.all<Color>(Color(0xff5C85E6)),
-                        padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
-                          EdgeInsets.symmetric(vertical: 15, horizontal: 55)),
-                        
-                      ),
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/dashboard');
-                      },
-                      child: Text(
-                        'Regist Now',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w500),
-                    ))
-                  )
+                      margin: EdgeInsets.only(left: 24),
+                      child: TextButton(
+                          style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all<Color>(
+                                Color(0xff5C85E6)),
+                            padding:
+                                MaterialStateProperty.all<EdgeInsetsGeometry>(
+                                    EdgeInsets.symmetric(
+                                        vertical: 15, horizontal: 55)),
+                          ),
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/registrasi');
+                          },
+                          child: Text(
+                            'Regist Now',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w500),
+                          )))
                 ],
               ),
             ),

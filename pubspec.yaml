@@ -89,6 +89,9 @@ flutter:
           weight: 300
         - asset: public\fonts\Poppins-Thin.ttf
           weight: 100
+    - family: Alatsi
+      fonts: 
+        - asset: public/fonts/Alatsi-Regular.ttf
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf

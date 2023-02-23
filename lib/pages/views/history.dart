@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,9 +17,11 @@ class HistoryApp extends StatelessWidget {
             children: [
               Container(
                 height: 106,
-                width: 375,
-                decoration:
-                    BoxDecoration(color: Color.fromARGB(1, 92, 133, 230)),
+                decoration: BoxDecoration(
+                    color: Color(0xff5C85E6),
+                    borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(16),
+                        bottomRight: Radius.circular(16))),
                 child: Row(children: [
                   TextButton(
                       onPressed: () {
@@ -31,12 +32,16 @@ class HistoryApp extends StatelessWidget {
                         width: 20,
                         height: 20,
                       )),
-                  Text('History',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500)),
+                  Align(
+                    widthFactor: 5,
+                    alignment: Alignment.center,
+                    child:
+                    Text('History',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500)),
+                  )
                 ]),
               )
             ],

@@ -27,12 +27,18 @@ class DashboardApp extends StatelessWidget {
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 24,
-                          fontWeight: FontWeight.w400),
+                          fontWeight: FontWeight.w400,
+                          fontFamily: 'Alatsi'
+                          ),
                     ),
-                    Image.asset(
+                    IconButton(
+                      onPressed: () {Navigator.pushNamed(context, '/settings');}, 
+                      
+                      icon: Image.asset(
                       'public/images/profile.png',
                       width: 40,
                       height: 40,
+                    )
                     )
                   ]),
             ),
@@ -68,7 +74,7 @@ class DashboardApp extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w600,
-                          color: Color(0xababab80),
+                          color: Color(0xffababab80),
                         ),
                       )),
                 ],
