@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:mymoney/pages/auth/login.dart';
 
@@ -7,8 +8,14 @@ import 'package:mymoney/pages/views/dashboard.dart';
 import 'package:mymoney/pages/splashscreen.dart';
 import 'package:mymoney/pages/views/history.dart';
 
-void main() {
-  runApp(MyApp());
+import 'firebase_options.dart';
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
