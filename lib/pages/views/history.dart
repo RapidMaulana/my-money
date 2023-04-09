@@ -35,15 +35,128 @@ class HistoryApp extends StatelessWidget {
                   Align(
                     widthFactor: 5,
                     alignment: Alignment.center,
-                    child:
-                    Text('History',
+                    child: Text('History',
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 16,
                             fontWeight: FontWeight.w500)),
                   )
                 ]),
-              )
+              ),
+              Container(
+                margin: EdgeInsets.only(
+                  top: 40,
+                ),
+                padding: EdgeInsets.only(top: 30, left: 30, right: 30),
+                child: Column(
+                  children: [
+                    Flex(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      direction: Axis.horizontal,
+                      children: [
+                        Row(
+                          children: [
+                            Image.asset(
+                              'public/images/_Spotify.png',
+                              width: 32,
+                              height: 32,
+                            ),
+                            Container(
+                                margin: EdgeInsets.only(left: 8),
+                                child: Text(
+                                  'Spotify',
+                                  style: TextStyle(
+                                      fontSize: 12, color: Colors.white),
+                                )),
+                          ],
+                        ),
+                        Container(
+                          child: Text(
+                            'Rp. 17.000',
+                            style: TextStyle(color: Colors.white, fontSize: 12),
+                          ),
+                        )
+                      ],
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(
+                  top: 0.0
+                ),
+                padding: EdgeInsets.only(top: 30,right: 30,left: 30),
+                child: Column(
+                  children: [
+                    Flex(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      direction: Axis.horizontal,
+                      children: [
+                        Row(
+                          children: [
+                            Image.asset(
+                              'public/images/_Amazon.png',
+                              width: 32,
+                              height: 32,
+                            ),
+                            Container(
+                                margin: EdgeInsets.only(left: 8),
+                                child: Text(
+                                  'Amazon Prime',
+                                  style: TextStyle(
+                                      fontSize: 12, color: Colors.white),
+                                )),
+                          ],
+                        ),
+                        Container(
+                          child: Text(
+                            'Rp. 79.000',
+                            style: TextStyle(color: Colors.white, fontSize: 12),
+                          ),
+                        )
+                      ],
+                    )
+                  ],
+                ),
+              ),
+               Container(
+                margin: EdgeInsets.only(
+                  top: 0.0
+                ),
+                padding: EdgeInsets.only(top: 30,right: 30,left: 30),
+                child: Column(
+                  children: [
+                    Flex(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      direction: Axis.horizontal,
+                      children: [
+                        Row(
+                          children: [
+                            Image.asset(
+                              'public/images/_Apple.png',
+                              width: 32,
+                              height: 32,
+                            ),
+                            Container(
+                                margin: EdgeInsets.only(left: 8),
+                                child: Text(
+                                  'Apple Store',
+                                  style: TextStyle(
+                                      fontSize: 12, color: Colors.white),
+                                )),
+                          ],
+                        ),
+                        Container(
+                          child: Text(
+                            'Rp. 50.000',
+                            style: TextStyle(color: Colors.white, fontSize: 12),
+                          ),
+                        )
+                      ],
+                    )
+                  ],
+                ),
+              ),
             ],
           ),
         ));

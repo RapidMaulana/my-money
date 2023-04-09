@@ -64,6 +64,7 @@ class LoginApp extends StatelessWidget {
                 child: Container(
                   margin: EdgeInsets.only(top: 10, left: 10, right: 10),
                   child: TextFormField(
+                    obscureText: true,
                     style: TextStyle(color: Colors.white),
                     decoration: InputDecoration(
                         enabledBorder: const UnderlineInputBorder(
@@ -82,6 +83,7 @@ class LoginApp extends StatelessWidget {
                 child: Container(
                   margin: EdgeInsets.only(top: 10, left: 5, right: 5),
                   child: TextFormField(
+                    obscureText: true,
                     style: TextStyle(color: Colors.white),
                     decoration: InputDecoration(
                         enabledBorder: const UnderlineInputBorder(

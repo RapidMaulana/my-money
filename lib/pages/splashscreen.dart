@@ -17,7 +17,7 @@ class _MainAppState extends State<SplashApp> {
   @override
   Widget build(BuildContext context) {
     return new SplashScreen(
-      seconds: 5,
+      seconds: 2,
       navigateAfterSeconds: new MainApp(),
       backgroundColor: Colors.black,
       title: new Text(
