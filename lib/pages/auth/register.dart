@@ -107,7 +107,7 @@ class RegisApp extends StatelessWidget {
                 child: Container(
                   margin: EdgeInsets.only(top: 10, left: 5, right: 5),
                   child: TextFormField(
-                    obscureText: false,
+                    obscureText: true,
                     style: TextStyle(color: Colors.white),
                     decoration: InputDecoration(
                         enabledBorder: const UnderlineInputBorder(

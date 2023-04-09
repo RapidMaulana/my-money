@@ -14,7 +14,6 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.black,
-        resizeToAvoidBottomInset: false,
         body: Column(
           children: [
             Container(
