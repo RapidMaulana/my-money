@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_database/firebase_database.dart';
 
 void main() {
   runApp(HistoryApp());
@@ -6,6 +7,7 @@ void main() {
 
 class HistoryApp extends StatelessWidget {
   const HistoryApp();
+  
 
   @override
   Widget build(BuildContext context) {
@@ -82,10 +84,8 @@ class HistoryApp extends StatelessWidget {
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(
-                  top: 0.0
-                ),
-                padding: EdgeInsets.only(top: 30,right: 30,left: 30),
+                margin: EdgeInsets.only(top: 0.0),
+                padding: EdgeInsets.only(top: 30, right: 30, left: 30),
                 child: Column(
                   children: [
                     Flex(
@@ -119,11 +119,9 @@ class HistoryApp extends StatelessWidget {
                   ],
                 ),
               ),
-               Container(
-                margin: EdgeInsets.only(
-                  top: 0.0
-                ),
-                padding: EdgeInsets.only(top: 30,right: 30,left: 30),
+              Container(
+                margin: EdgeInsets.only(top: 0.0),
+                padding: EdgeInsets.only(top: 30, right: 30, left: 30),
                 child: Column(
                   children: [
                     Flex(

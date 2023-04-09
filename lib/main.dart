@@ -14,7 +14,7 @@ import 'package:mymoney/pages/views/report.dart';
 
 import 'firebase_options.dart';
 
-Future<void> main() async {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => SplashApp(),
         '/dashboard': (context) => const DashboardApp(),
         '/login': (context) => const MainApp(),
-        '/history': (context) => const HistoryApp(),
+        '/history': (context) =>  HistoryApp(),
         '/loginn': (context) => const LoginApp(),
         '/registrasi': (context) => const RegisApp(),
         '/settings': (context) => const SettingsApp(), 
